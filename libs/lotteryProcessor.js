@@ -1,10 +1,7 @@
 function lotteryProcessor(pathToLibs){
     var amqp = require('amqplib');
-    var bin = process.cwd() + '/bin/';
     var log = require(pathToLibs + 'log')(module);
     var db = require(pathToLibs + 'db/mongoose');
-    var config = require(pathToLibs + 'config');
-    var www = require(bin + 'www');
     var request = require('request');
 
     var Lottery = require(pathToLibs + 'model/lottery');
